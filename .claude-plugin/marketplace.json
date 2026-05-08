@@ -40,6 +40,11 @@
       "description": "Operational workflows: KYC document parsing and rules-grid evaluation"
     },
     {
+      "name": "small-business",
+      "source": "./plugins/vertical-plugins/small-business",
+      "description": "Small-business bookkeeping primitives — locked chart of accounts, daily close, per-job margin, anomaly watcher, PDF books. Premier Detailing is the v1 reference customer."
+    },
+    {
       "name": "pitch-agent",
       "source": "./plugins/agent-plugins/pitch-agent",
       "description": "Comps, precedents, LBO to a branded pitch deck, end to end"
@@ -83,6 +88,11 @@
       "name": "month-end-closer",
       "source": "./plugins/agent-plugins/month-end-closer",
       "description": "Accruals, roll-forwards, variance commentary"
+    },
+    {
+      "name": "bookkeeping",
+      "source": "./plugins/agent-plugins/bookkeeping",
+      "description": "End-of-day bookkeeping for owner-operated service businesses — sloppy input, locked categories, PDF books, anomaly alerts. v1 manual / v2 autonomous."
     },
     {
       "name": "statement-auditor",

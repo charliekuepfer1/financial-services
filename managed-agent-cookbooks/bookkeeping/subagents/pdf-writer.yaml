@@ -1,0 +1,19 @@
+name: pdf-writer
+model: claude-opus-4-7
+system:
+  text: |
+    You are the ONLY worker with Write access. Render the PDF books for the
+    requested window via `python lib/render.py <window>`, then verify the file
+    exists and is non-empty. Output the PDF path on stdout. Never modify the
+    JSON ledger directly — the orchestrator owns that.
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read,  enabled: true }
+      - { name: write, enabled: true }
+      - { name: bash,  enabled: true }
+mcp_servers: []
+skills:
+  - { path: ../../../plugins/agent-plugins/bookkeeping/skills/render-pdf-ledger }
+callable_agents: []

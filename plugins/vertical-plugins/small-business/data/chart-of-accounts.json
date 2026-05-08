@@ -1,0 +1,147 @@
+{
+  "_meta": {
+    "business": "Premier Detailing",
+    "location": "Stratford, ON",
+    "season_start": "04-01",
+    "season_end": "07-31",
+    "fiscal_year_target_revenue": 150000,
+    "operating_days_per_month": 22,
+    "currency": "CAD",
+    "schema_version": 1,
+    "locked": true,
+    "unlock_token_required_to_add_categories": true
+  },
+
+  "revenue": {
+    "service.interior.basic":       { "label": "Interior — Basic",          "tier": "interior",  "default_margin_floor": 0.55 },
+    "service.interior.deluxe":      { "label": "Interior — Deluxe",         "tier": "interior",  "default_margin_floor": 0.55 },
+    "service.interior.premium":     { "label": "Interior — Premium",        "tier": "interior",  "default_margin_floor": 0.55 },
+    "service.exterior.basic":       { "label": "Exterior — Basic",          "tier": "exterior",  "default_margin_floor": 0.50 },
+    "service.exterior.deluxe":      { "label": "Exterior — Deluxe",         "tier": "exterior",  "default_margin_floor": 0.50 },
+    "service.exterior.premium":     { "label": "Exterior — Premium",        "tier": "exterior",  "default_margin_floor": 0.50 },
+    "service.full.basic":           { "label": "Full Detail — Basic",       "tier": "full",      "default_margin_floor": 0.50 },
+    "service.full.deluxe":          { "label": "Full Detail — Deluxe",      "tier": "full",      "default_margin_floor": 0.50 },
+    "service.full.premier":         { "label": "Premier Package",           "tier": "premier",   "default_margin_floor": 0.50 },
+    "service.ceramic.1yr":          { "label": "Ceramic Coating — 1yr",     "tier": "ceramic",   "default_margin_floor": 0.60 },
+    "service.ceramic.3yr":          { "label": "Ceramic Coating — 3yr",     "tier": "ceramic",   "default_margin_floor": 0.60 },
+    "service.ceramic.5yr":          { "label": "Ceramic Coating — 5yr",     "tier": "ceramic",   "default_margin_floor": 0.60 },
+    "service.ceramic.10yr":         { "label": "Ceramic Coating — 10yr",    "tier": "ceramic",   "default_margin_floor": 0.60 },
+    "service.correction.single":    { "label": "Paint Correction — 1-stage","tier": "correction","default_margin_floor": 0.55 },
+    "service.correction.multi":     { "label": "Paint Correction — multi",  "tier": "correction","default_margin_floor": 0.55 },
+    "service.maintenance.wash":     { "label": "Maintenance Wash",          "tier": "maintenance","default_margin_floor": 0.45 },
+
+    "addon.pet_hair":               { "label": "Add-on — Pet hair",         "tier": "addon" },
+    "addon.headlight":              { "label": "Add-on — Headlight restore","tier": "addon" },
+    "addon.engine_bay":             { "label": "Add-on — Engine bay",       "tier": "addon" },
+    "addon.odor_ozone":             { "label": "Add-on — Odor / ozone",     "tier": "addon" },
+    "addon.leather":                { "label": "Add-on — Leather treat",    "tier": "addon" },
+    "addon.fabric_protect":         { "label": "Add-on — Fabric protect",   "tier": "addon" },
+    "addon.scratch":                { "label": "Add-on — Scratch removal",  "tier": "addon" },
+    "addon.wheel_deep":             { "label": "Add-on — Wheel deep clean", "tier": "addon" },
+    "addon.undercarriage":          { "label": "Add-on — Undercarriage",    "tier": "addon" },
+    "addon.sealant":                { "label": "Add-on — Paint sealant",    "tier": "addon" },
+    "addon.wax":                    { "label": "Add-on — Wax",              "tier": "addon" },
+
+    "fee.mileage":                  { "label": "Mileage / travel fee",      "tier": "fee" },
+    "tip":                          { "label": "Tip",                       "tier": "tip" },
+    "refund":                       { "label": "Refund (negative revenue)", "tier": "refund" },
+    "giftcard.sold":                { "label": "Gift card sold (deferred)", "tier": "deferred" },
+    "package.prepay":               { "label": "Package pre-pay (deferred)","tier": "deferred" }
+  },
+
+  "payment_methods": [
+    "square_deposit", "square_final", "cash", "etransfer", "giftcard_redeemed", "package_credit"
+  ],
+
+  "expenses": {
+    "cogs.chemicals":               { "label": "Chemicals & supplies",                "is_cogs": true,  "default_hst_rate": 0.13 },
+    "cogs.consumables":             { "label": "Consumables (towels, pads, applicators)","is_cogs": true,"default_hst_rate": 0.13 },
+    "equipment.tools":              { "label": "Equipment & tools",                   "default_hst_rate": 0.13 },
+    "equipment.maintenance":        { "label": "Equipment maintenance / repair",      "default_hst_rate": 0.13 },
+    "vehicle.fuel":                 { "label": "Vehicle fuel",                        "default_hst_rate": 0.13 },
+    "vehicle.insurance":            { "label": "Vehicle insurance",                   "default_hst_rate": 0.00 },
+    "vehicle.maintenance":          { "label": "Vehicle maintenance / repair",        "default_hst_rate": 0.13 },
+    "vehicle.registration":         { "label": "Vehicle registration / licensing",    "default_hst_rate": 0.00 },
+    "payroll.wages":                { "label": "Employee wages (Wagepoint)",          "default_hst_rate": 0.00 },
+    "payroll.owner_salary":         { "label": "Owner salary",                        "default_hst_rate": 0.00 },
+    "payroll.source_deductions":    { "label": "Payroll source deductions / CPP/EI",  "default_hst_rate": 0.00 },
+    "payroll.wsib":                 { "label": "WSIB / workers comp",                 "default_hst_rate": 0.00 },
+    "software.square":              { "label": "Software — Square",                   "default_hst_rate": 0.13 },
+    "software.wagepoint":           { "label": "Software — Wagepoint",                "default_hst_rate": 0.13 },
+    "software.wave":                { "label": "Software — Wave",                     "default_hst_rate": 0.13 },
+    "software.manychat":            { "label": "Software — ManyChat",                 "default_hst_rate": 0.00 },
+    "software.other":               { "label": "Software — other subscriptions",      "default_hst_rate": 0.13 },
+    "marketing.meta_ads":           { "label": "Marketing — Meta / IG ads",           "default_hst_rate": 0.00 },
+    "marketing.manychat_automation":{ "label": "Marketing — ManyChat automation",     "default_hst_rate": 0.00 },
+    "marketing.print_signage":      { "label": "Marketing — print / signage / cards", "default_hst_rate": 0.13 },
+    "marketing.other":              { "label": "Marketing — other",                   "default_hst_rate": 0.13 },
+    "fees.square_processing":       { "label": "Square processing fees",              "default_hst_rate": 0.00 },
+    "fees.bank":                    { "label": "Bank fees",                           "default_hst_rate": 0.00 },
+    "fees.loan_interest":           { "label": "Loan interest",                       "default_hst_rate": 0.00 },
+    "professional.accountant":      { "label": "Professional — accountant",           "default_hst_rate": 0.13 },
+    "professional.legal":           { "label": "Professional — legal",                "default_hst_rate": 0.13 },
+    "professional.bookkeeper":      { "label": "Professional — bookkeeper",           "default_hst_rate": 0.13 },
+    "office.phone":                 { "label": "Phone & internet",                    "default_hst_rate": 0.13 },
+    "office.supplies":              { "label": "Office supplies",                     "default_hst_rate": 0.13 },
+    "training.courses":             { "label": "Training & courses",                  "default_hst_rate": 0.13 },
+    "uniforms.apparel":             { "label": "Uniforms & branded apparel",          "default_hst_rate": 0.13 },
+    "insurance.business_liability": { "label": "Business liability insurance",        "default_hst_rate": 0.00 },
+    "insurance.other":              { "label": "Other insurance",                     "default_hst_rate": 0.00 },
+    "permits.licenses":             { "label": "Permits & licenses",                  "default_hst_rate": 0.00 },
+    "tax.income_instalment":        { "label": "Income tax instalment",               "default_hst_rate": 0.00 },
+    "tax.hst_remit":                { "label": "HST remittance to CRA",               "default_hst_rate": 0.00 },
+    "owner.draw":                   { "label": "Owner draw (not an expense — equity)","default_hst_rate": 0.00 },
+    "other.uncategorized":          { "label": "Other / uncategorized (note required)","default_hst_rate": 0.13 }
+  },
+
+  "suppliers": {
+    "_closed": false,
+    "known": [
+      "PDS", "Auto Obsessed", "TOC", "Canadian Tire", "Amazon",
+      "Wagepoint", "Wave", "ManyChat", "Meta", "Square",
+      "Bell", "Rogers", "Costco"
+    ]
+  },
+
+  "hst": {
+    "registered": false,
+    "number": null,
+    "method": "none",
+    "filing_cadence": "quarterly",
+    "province_default_rate": 0.13,
+    "_note": "Set registered=true and method='regular' or 'quick' once CRA registration completes. Schema is HST-ready; ledger will start computing hst.collected and hst.itc the moment method flips."
+  },
+
+  "alerts": {
+    "revenue_pace_window_days": 7,
+    "revenue_pace_alert_pct": 0.25,
+    "category_monthly_caps_cad": {
+      "cogs.chemicals": 1200,
+      "vehicle.fuel": 900,
+      "marketing.meta_ads": 600,
+      "software.other": 200
+    },
+    "per_job_margin_floors": {
+      "default": 0.45,
+      "interior": 0.55,
+      "exterior": 0.50,
+      "ceramic": 0.60,
+      "correction": 0.55,
+      "premier": 0.50,
+      "maintenance": 0.45
+    },
+    "cash_floor_cad": 0
+  },
+
+  "labor": {
+    "owner_internal_rate_cad_per_hour": 65,
+    "_note": "Owners are paid salary, but per-job margin charges this internal rate against owner time so margin reflects true cost. Edit when Wagepoint hourly data feeds in."
+  },
+
+  "mileage": {
+    "model": "daily_total_km",
+    "van_business_use_pct": 1.00,
+    "cra_rate_cad_per_km_first_5000": 0.72,
+    "cra_rate_cad_per_km_after": 0.66
+  }
+}

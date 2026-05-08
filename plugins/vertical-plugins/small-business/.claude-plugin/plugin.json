@@ -1,0 +1,8 @@
+{
+  "name": "small-business",
+  "version": "0.1.0",
+  "description": "Small-business bookkeeping primitives — chart of accounts, daily close, per-job margin, anomaly watcher, PDF books. Premier Detailing is the v1 reference customer.",
+  "author": {
+    "name": "Anthropic FSI"
+  }
+}

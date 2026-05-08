@@ -1,0 +1,6 @@
+[
+  { "event": "End of day 2026-05-08 — pull Square + bank + Wagepoint, stage and auto-confirm high-confidence rows, render today's PDF", "description": "Standard autonomous overnight close" },
+  { "event": "Owner asks: real-time P&L for May 2026", "description": "On-demand monthly P&L + PDF" },
+  { "event": "Run anomaly check for Premier Detailing season-to-date", "description": "Season-to-date alert sweep" },
+  { "event": "Per-job profitability for trailing 30 days, flag anything below tier floor", "description": "Margin retrospective" }
+]

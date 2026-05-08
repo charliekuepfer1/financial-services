@@ -1,0 +1,8 @@
+{
+  "name": "bookkeeping",
+  "version": "0.1.0",
+  "description": "End-of-day bookkeeping agent for owner-operated service businesses. Sloppy input → categorized ledger → PDF books → anomaly alerts. Premier Detailing is the v1 reference customer.",
+  "author": {
+    "name": "Anthropic FSI"
+  }
+}

@@ -1,0 +1,41 @@
+# Bookkeeping Agent — managed-agent cookbook
+# v2 = autonomous mode. Hooks Square + bank feed + Wagepoint, runs the books overnight.
+# v1 ships as the Cowork plugin (../../plugins/agent-plugins/bookkeeping); this cookbook
+# is the headless deploy.
+
+name: bookkeeping
+model: claude-opus-4-7
+
+system:
+  file: ../../plugins/agent-plugins/bookkeeping/agents/bookkeeping.md
+  append: |
+    You are running headless. The owner is asleep. Pull the day's activity from
+    Square, the bank feed, and Wagepoint via the configured MCPs. Stage rows,
+    auto-confirm anything with confidence ≥ 0.9, leave the rest in staging
+    with a flag for the owner to resolve in the morning. Render the PDF books
+    to ./out/books-<YYYY-MM-DD>.pdf. Do not message the owner unless an alert
+    fires at HIGH severity or staging has > 5 unresolved rows.
+
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read,  enabled: true }
+      - { name: bash,  enabled: true }
+      - { name: glob,  enabled: true }
+      - { name: grep,  enabled: true }
+  - { type: mcp_toolset, mcp_server_name: square,    default_config: { enabled: true } }
+  - { type: mcp_toolset, mcp_server_name: bank-feed, default_config: { enabled: true } }
+  - { type: mcp_toolset, mcp_server_name: wagepoint, default_config: { enabled: true } }
+
+mcp_servers:
+  - { type: url, name: square,    url: "${SQUARE_MCP_URL}" }
+  - { type: url, name: bank-feed, url: "${BANK_MCP_URL}" }
+  - { type: url, name: wagepoint, url: "${WAGEPOINT_MCP_URL}" }
+
+skills:
+  - { from_plugin: ../../plugins/agent-plugins/bookkeeping }
+
+callable_agents:
+  - { manifest: ./subagents/receipt-reader.yaml }
+  - { manifest: ./subagents/pdf-writer.yaml }
